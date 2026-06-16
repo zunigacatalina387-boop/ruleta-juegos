@@ -1,0 +1,384 @@
+/* CAJA CONTENEDORA INTELIGENTE (SE ADAPTA A LA MEDIDA) */
+#lista-jugadores-visual {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    list-style: none !important;
+    padding: 10px !important;
+    margin: 15px auto !important;
+    width: 90% !important;
+    
+    /* CAMBIO CLAVE AQUÍ: */
+    height: auto !important;           /* Permite que la caja cambie de tamaño libremente */
+    min-height: 0px !important;         /* Si está vacía, colapsa y no ocupa espacio extra */
+    max-height: 90px !important;        /* ¡LÍMITE! Al llegar a unas 2 filas, se congela y activa el scroll */
+    overflow-y: auto !important;        /* El scroll solo aparece si pasa los 90px */
+    
+    /* Estética que ya tenías */
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    border: 1px dashed rgba(255, 255, 255, 0.3) !important;
+
+}body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #860b0b;
+    margin: 0;
+    padding: 20px;}
+h1 {
+    text-align: center;
+    color: #860b0b;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+/* PANTALLA DE BIENVENIDA CON LETRAS EN MOVIMIENTO INFINITO */
+.welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #860b0b;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    overflow: hidden;
+}
+
+.marquee-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.15;
+    pointer-events: none;
+    user-select: none;
+}
+
+.marquee-row {
+    display: flex;
+    white-space: nowrap;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.marquee-row span {
+    display: inline-block;
+    animation: moverseIzquierda 35s linear infinite;
+    padding-right: 50px;
+}
+
+.marquee-row:nth-child(even) span {
+    animation: moverseIzquierda 45s linear infinite reverse;
+}
+
+@keyframes moverseIzquierda {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+.welcome-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    padding: 30px;
+    background: rgba(42, 15, 15, 0.85);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(82, 4, 4, 0.1);
+    box-shadow: 0 20px 40px rgba(117, 4, 4, 0.5);
+}
+.welcome-content h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+.btn-principal {
+    background: linear-gradient(135deg, #ad0202, #860b0b);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(134, 11, 11, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 25px;
+}
+.btn-principal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(134, 11, 11, 0.6);
+}
+.welcome-screen.ocultar {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* DISEÑO DE LA RULETA */
+.contenedor-ruleta {
+    background: linear-gradient(135deg, #890b0b, #2a0f0f);
+    border-radius: 16px;
+    padding: 25px;
+    margin: 0 auto 30px auto;
+    max-width: 550px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(168, 0, 0, 0.418);
+    color: white;
+}
+.contenedor-ruleta h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+.controles-ruleta {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.controles-ruleta select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #ffffff;
+    color: #890b0b;
+    font-weight: bold;
+    font-size: 0.95rem;
+    outline: none;
+}
+.btn-ruleta {
+    background: #ad0202;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(173, 2, 2, 0.3);
+}
+.btn-ruleta:hover {
+    background: #860b0b;
+    transform: translateY(-1px);
+}
+.btn-ruleta:disabled {
+    background: #4a0505;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+.pantalla-ruleta {
+    background: #170202;
+    border: 3px solid #ad0202;
+    border-radius: 12px;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    overflow: hidden;
+    word-break: break-word;
+}
+.pantalla-ruleta.girando {
+    border-color: #f59e0b;
+    animation: parpadeoRuleta 0.2s infinite alternate;
+}
+@keyframes parpadeoRuleta {
+    from { box-shadow: 0 0 5px #f59e0b; }
+    to { box-shadow: 0 0 20px #ad0202; }
+}
+
+/* SECCIÓN FILTROS Y CONTADOR */
+.seccion-filtros {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.grupo-filtro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.grupo-filtro label {
+    font-weight: bold;
+    min-width: 90px;
+    color: #572a2a;
+}
+
+.btn-filtro {
+    background-color: #f1f5f9;
+    color: #572a2a;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+#btn-cat-todos.activo { background-color: #860b0b; color: white; }
+#btn-cat-agilidad.activo { background-color: #f97316; color: white; }
+#btn-cat-familia.activo { background-color: #22c55e; color: white; }
+#btn-cat-party.activo { background-color: #a855f7; color: white; }
+#btn-cat-uno.activo { background-color: #b91c1c; color: white; }
+#btn-cat-tablero.activo { background-color: #334155; color: white; }
+#btn-cat-custom.activo { background-color: #860b0b; color: white; box-shadow: 0 0 8px rgba(134, 11, 11, 0.4); }
+
+.contador-juegos {
+    font-size: 1.1rem;
+    color: #6d3535;
+    font-weight: bold;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 12px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.contador-badge {
+    background-color: #860b0b;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+}
+
+/* CONTENEDOR DE TARJETAS */
+.contenedor-juegos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-juego {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(126, 51, 51, 0.404);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.tarjeta-juego:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(109, 28, 28, 0.08);
+}
+
+.tarjeta-juego[data-categoria="agilidad"] { border-top: 6px solid #f97316; }
+.tarjeta-juego[data-categoria="familia"] { border-top: 6px solid #22c55e; }
+.tarjeta-juego[data-categoria="party games"] { border-top: 6px solid #a855f7; }
+.tarjeta-juego[data-categoria="saga uno"] { border-top: 6px solid #b91c1c; }
+.tarjeta-juego[data-categoria="tablero"] { border-top: 6px solid #334155; }
+
+.tarjeta-juego.oculto {
+    display: none;
+}
+.tarjeta-juego h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #860d0d;
+    font-size: 1.2rem;
+    padding-right: 30px;
+}
+.tarjeta-juego p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+    color: #704545;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.tarjeta-juego[data-categoria="agilidad"] .tag { background-color: #ffedd5; color: #ea580c; }
+.tarjeta-juego[data-categoria="familia"] .tag { background-color: #dcfce7; color: #16a34a; }
+.tarjeta-juego[data-categoria="party games"] .tag { background-color: #f3e8ff; color: #9333ea; }
+.tarjeta-juego[data-categoria="saga uno"] .tag { background-color: #fee2e2; color: #dc2626; }
+.tarjeta-juego[data-categoria="tablero"] .tag { background-color: #fee2e2; color: #334155; }
+
+/* CASILLA DE SELECCIÓN (CHECKBOX) PERSONALIZADA */
+.contenedor-checkbox {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;
+}
+.contenedor-checkbox input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: #860b0b;
+}
+/* Contenedor que alinea la info y la imagen lado a lado */
+.cuerpo-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px; /* Espacio de separación entre el texto y la foto */
+}
+
+/* Asegura que los textos ocupen el espacio correspondiente a la izquierda */
+.info-juego {
+    flex: 1;
+}
+
+/* Contenedor de la imagen a la derecha */
+.imagen-juego {
+    width: 85px;       /* Ancho fijo para que todas las portadas midan igual */
+    height: 110px;     /* Alto fijo proporcional a una caja de juego */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;  /* Si la imagen es muy grande, corta los excesos */
+    border-radius: 8px; /* Bordes suaves para la imagen */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Una leve sombra elegante */
+}
+
+/* Control estricto del comportamiento de la imagen dentro de su espacio */
+.imagen-juego img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta y centra la portada sin deformarla ni estirarla */
+    /* Color del borde superior para la tarjeta de tablero */
+.tarjeta-juego[data-categoria="tablero"] { 
+    border-top: 6px solid #334155; /* Un gris pizarra oscuro */
+}
+
+/* Color de la pequeña etiqueta (tag) interna */
+.tarjeta-juego[data-categoria="tablero"] .tag { 
+    background-color: #f1f5f9; 
+    color: #334155; 
+}
+
+/* Estilo para el botón de filtro cuando esté activo */
+#btn-cat-tablero.activo { 
+    background-color: #334155; 
+    color: white; 
+}
+}

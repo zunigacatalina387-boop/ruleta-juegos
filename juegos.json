@@ -1,0 +1,504 @@
+[
+  {
+    "id": 1,
+    "nombre": "Sushi GO!",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 5,
+    "duracion": 15,
+    "edadMinima": 8,
+    "imagen": "img/sushigo.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Dobles",
+    "categoria": "agilidad",
+    "jugadoresMin": 3,
+    "jugadoresMax": 4,
+    "duracion": null,
+    "edadMinima": 6,
+    "imagen": "img/dobles.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Hilo",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": 20,
+    "edadMinima": 8,
+    "imagen": "img/hilo.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Yogi",
+    "categoria": "party games",
+    "jugadoresMin": 3,
+    "jugadoresMax": 10,
+    "duracion": 20,
+    "edadMinima": 8,
+    "imagen": "img/yogi.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Jungle Speed",
+    "categoria": "party games",
+    "jugadoresMin": 2,
+    "jugadoresMax": 15,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/jungle-speed.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Jenga",
+    "categoria": "agilidad",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": 15,
+    "edadMinima": 6,
+    "imagen": "img/jenga.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Fantasma Blitz",
+    "categoria": "agilidad",
+    "jugadoresMin": 2,
+    "jugadoresMax": 8,
+    "duracion": 30,
+    "edadMinima": 8,
+    "imagen": "img/fantasma-blitz.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Polilla Tramposa",
+    "categoria": "party games",
+    "jugadoresMin": 3,
+    "jugadoresMax": 5,
+    "duracion": 25,
+    "edadMinima": 7,
+    "imagen": "img/polilla-tramposa.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Taco Gato Cabra Queso Pizza",
+    "categoria": "agilidad",
+    "jugadoresMin": 2,
+    "jugadoresMax": 8,
+    "duracion": 10,
+    "edadMinima": 8,
+    "imagen": "img/taco-gato-cabra-queso-pizza.jpg"
+  },
+  {
+    "id": 10,
+    "nombre": "Tulio Lulo Lana Tarro Patana",
+    "categoria": "agilidad",
+    "jugadoresMin": 2,
+    "jugadoresMax": 8,
+    "duracion": 10,
+    "edadMinima": 8,
+    "imagen": "img/tulio-lulo-lana-tarro-patana.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Dobble Harry Potter",
+    "categoria": "agilidad",
+    "jugadoresMin": 2,
+    "jugadoresMax": 8,
+    "duracion": 15,
+    "edadMinima": 6,
+    "imagen": "img/dobble-harry-potter.jpg"
+  },
+  {
+    "id": 12,
+    "nombre": "Dobble",
+    "categoria": "agilidad",
+    "jugadoresMin": 2,
+    "jugadoresMax": 8,
+    "duracion": 15,
+    "edadMinima": 6,
+    "imagen": "img/dobble.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Sweet Takes",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 5,
+    "duracion": 30,
+    "edadMinima": 8,
+    "imagen": "img/sweet-takes.jpg"
+  },
+  {
+    "id": 14,
+    "nombre": "Bop it!",
+    "categoria": "party games",
+    "jugadoresMin": 1,
+    "jugadoresMax": null,
+    "duracion": 8,
+    "edadMinima": 8,
+    "imagen": "img/bop-it.jpg"
+  },
+  {
+    "id": 15,
+    "nombre": "Piggy Piggy",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": 20,
+    "edadMinima": 7,
+    "imagen": "img/piggy-piggy.jpg"
+  },
+  {
+    "id": 16,
+    "nombre": "Memoria My Little Pony",
+    "categoria": "familia",
+    "jugadoresMin": 1,
+    "jugadoresMax": null,
+    "duracion": null,
+    "edadMinima": 3,
+    "imagen": "img/memoria-my-little-pony.jpg"
+  },
+  {
+    "id": 17,
+    "nombre": "Exploding Kittens",
+    "categoria": "party games",
+    "jugadoresMin": 2,
+    "jugadoresMax": 5,
+    "duracion": 15,
+    "edadMinima": 7,
+    "imagen": "img/exploding-kittens.jpg"
+  },
+  {
+    "id": 18,
+    "nombre": "Trio",
+    "categoria": "familia",
+    "jugadoresMin": 3,
+    "jugadoresMax": 6,
+    "duracion": 15,
+    "edadMinima": 7,
+    "imagen": "img/trio.jpg"
+  },
+  {
+    "id": 19,
+    "nombre": "Jungo",
+    "categoria": "familia",
+    "jugadoresMin": 3,
+    "jugadoresMax": 5,
+    "duracion": 15,
+    "edadMinima": 10,
+    "imagen": "img/jungo.jpg"
+  },
+  {
+    "id": 20,
+    "nombre": "Palitos Chinos",
+    "categoria": "agilidad",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": 20,
+    "edadMinima": 5,
+    "imagen": "img/palitos-chinos.jpg"
+  },
+  {
+    "id": 21,
+    "nombre": "Virus!",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": 20,
+    "edadMinima": 14,
+    "imagen": "img/virus.jpg"
+  },
+  {
+    "id": 22,
+    "nombre": "Virus! 2 Evolution",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": 20,
+    "edadMinima": 14,
+    "imagen": "img/virus-2-evolution.jpg"
+  },
+  {
+    "id": 23,
+    "nombre": "Virus! Halloween",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": 20,
+    "edadMinima": 14,
+    "imagen": "img/virus-halloween.jpg"
+  },
+  {
+    "id": 24,
+    "nombre": "EXIT: El Señor de los Anillos",
+    "categoria": "familia",
+    "jugadoresMin": 1,
+    "jugadoresMax": 4,
+    "duracion": 90,
+    "edadMinima": 10,
+    "imagen": "img/exit-el-senor-de-los-anillos.jpg"
+  },
+  {
+    "id": 25,
+    "nombre": "UNO",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 10,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno.jpg"
+  },
+  {
+    "id": 26,
+    "nombre": "LIAR'S UNO",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/liars-uno.jpg"
+  },
+  {
+    "id": 27,
+    "nombre": "UNO FLIP!",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 10,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-flip.jpg"
+  },
+  {
+    "id": 28,
+    "nombre": "UNO FLEX!",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 8,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-flex.jpg"
+  },
+  {
+    "id": 29,
+    "nombre": "UNO No Mercy + EX!",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-no-mercy-ex.jpg"
+  },
+  {
+    "id": 30,
+    "nombre": "UNO TEAMS!",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 4,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-teams.jpg"
+  },
+  {
+    "id": 31,
+    "nombre": "UNO EXPRESS",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 4,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-express.jpg"
+  },
+  {
+    "id": 32,
+    "nombre": "UNO HARRY POTTER",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 10,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-harry-potter.jpg"
+  },
+  {
+    "id": 33,
+    "nombre": "UNO ELITE Formula 1",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 5,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-elite-formula-1.jpg"
+  },
+  {
+    "id": 34,
+    "nombre": "UNO PACK DE REVERSA",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 10,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-pack-de-reversa.jpg"
+  },
+  {
+    "id": 35,
+    "nombre": "UNO PACK DE CAMBIO",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 10,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-pack-de-cambio.jpg"
+  },
+  {
+    "id": 36,
+    "nombre": "UNO PACK PARA SUMAR",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 10,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-pack-para-sumar.jpg"
+  },
+  {
+    "id": 37,
+    "nombre": "UNO PACK DE VELOCIDAD",
+    "categoria": "saga uno",
+    "jugadoresMin": 2,
+    "jugadoresMax": 10,
+    "duracion": null,
+    "edadMinima": 7,
+    "imagen": "img/uno-pack-de-velocidad.jpg"
+  },
+  {
+    "id": 38,
+    "nombre": "Happy Salmon",
+    "categoria": "party games",
+    "jugadoresMin": 2,
+    "jugadoresMax": 10,
+    "duracion": 1.5 ,
+    "edadMinima": 8,
+    "imagen": "img/happy-salmon.jpg"
+  },
+   {
+    "id": 39,
+    "nombre": "Domino",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 4,
+    "duracion": 15,
+    "edadMinima": 6,
+    "imagen": "img/domino.jpg"
+  },
+  {
+    "id": 40,
+    "nombre": "Pictionary AIR 2",
+    "categoria": "party games",
+    "jugadoresMin": 3,
+    "jugadoresMax": 12,
+    "duracion": "20-30",
+    "edadMinima": 8,
+    "imagen": "img/pictionary-air-2.jpg"
+    },
+    {
+    "id": 41,
+    "nombre": "Naipe Español",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": "10-20",
+    "edadMinima": 8,
+    "imagen": "img/naipe-espanol.jpg"
+    },
+    {
+    "id": 42,
+    "nombre": "Naipe Ingles",
+    "categoria": "familia",
+    "jugadoresMin": 2,
+    "jugadoresMax": 4,
+    "duracion": "45-60",
+    "edadMinima": 3,
+    "imagen": "img/naipe-ingles.jpg"
+    },
+    {
+    "id": 43,
+    "nombre": "Batalla Naval",
+    "categoria": "tablero",
+    "jugadoresMin": "-",
+    "jugadoresMax": 2,
+    "duracion": "15-30",
+    "edadMinima": 7,
+    "imagen": "img/batalla-naval.jpg"
+    },
+    {
+    "id": 44,
+    "nombre": "Monopoly De Viajes",
+    "categoria": "tablero",
+    "jugadoresMin": 2,
+    "jugadoresMax": 3,
+    "duracion": "30-45",
+    "edadMinima": 8,
+    "imagen": "img/monopoly-de-viajes.jpg"
+    },
+    {
+    "id": 45,
+    "nombre": "Monopoly Junior Frozen",
+    "categoria": "tablero",
+    "jugadoresMin": 2,
+    "jugadoresMax": 3,
+    "duracion": "20-30",
+    "edadMinima": 5,
+    "imagen": "img/monopoly-junior-frozen.jpg"
+    },
+    {
+    "id": 46,
+    "nombre": "Monopoly Banco Electrónico",
+    "categoria": "tablero",
+    "jugadoresMin": 2,
+    "jugadoresMax": 4,
+    "duracion": "40-60",
+    "edadMinima": 8,
+    "imagen": "img/monopoly-banco-electronico.jpg"
+    },
+    {
+    "id": 47,
+    "nombre": "El gran Santiago",
+    "categoria": "tablero",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": "40-60",
+    "edadMinima": 8,
+    "imagen": "img/el-gran-santiago.jpg"
+    },
+    {
+    "id": 48,
+    "nombre": "The Trivium Junior",
+    "categoria": "tablero",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": "40-60",
+    "edadMinima": 7,
+    "imagen": "img/the-trivium-junior.jpg"
+    },
+    {
+    "id": 49,
+    "nombre": "2014 FIFA World Cup BRAZIL",
+    "categoria": "tablero",
+    "jugadoresMin": 2,
+    "jugadoresMax": 6,
+    "duracion": "40-60",
+    "edadMinima": 4,
+    "imagen": "img/2014-fifa.jpg"
+    },
+    {
+    "id": 50,
+    "nombre": "Cranium",
+    "categoria": "tablero",
+    "jugadoresMin": 4,
+    "jugadoresMax": 16,
+    "duracion": "30-60",
+    "edadMinima": 12,
+    "imagen": "img/cranium.jpg"
+    }
+  ]
+  
+  
