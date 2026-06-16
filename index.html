@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Colección de Juegos de Mesa</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <!-- PANTALLA DE INICIO CON FILAS EN MOVIMIENTO COMPLETO -->
+    <div id="pantalla-inicio" class="welcome-screen">
+        <div class="marquee-container">
+            <div class="marquee-row"><span>SUSHI GO • DOBBLE • YOGI • JUNGLE SPEED • JENGA • FANTASMA BLITZ • POLILLA TRAMPOSA • TACO GATO CABRA QUESO PIZZA • TULIO LULO LANA TARRO PATANA • SUSHI GO • DOBBLE • YOGI • JUNGLE SPEED • JENGA</span></div>
+            <div class="marquee-row"><span>EXPLODING KITTENS • TRIO • JUNGO • PALITOS CHINOS • VIRUS • EXIT • SWEET TAKES • BOP IT • PIGGY PIGGY • MEMORIA MLP • EXPLODING KITTENS • TRIO • JUNGO • PALITOS CHINOS</span></div>
+            <div class="marquee-row"><span>UNO • LIARS UNO • UNO FLIP • UNO FLEX • UNO SHOW EM NO MERCY • UNO TEAMS • UNO EXPRESS • UNO HARRY POTTER • UNO ELITE F1 • UNO PACK DE REVERSA • UNO • LIARS UNO • UNO FLIP</span></div>
+            <div class="marquee-row"><span>SUSHI GO • DOBBLE • YOGI • JUNGLE SPEED • JENGA • FANTASMA BLITZ • POLILLA TRAMPOSA • TACO GATO CABRA QUESO PIZZA • TULIO LULO LANA TARRO PATANA • SUSHI GO • DOBBLE • YOGI • JUNGLE SPEED • JENGA</span></div>
+            <div class="marquee-row"><span>EXPLODING KITTENS • TRIO • JUNGO • PALITOS CHINOS • VIRUS • EXIT • SWEET TAKES • BOP IT • PIGGY PIGGY • MEMORIA MLP • EXPLODING KITTENS • TRIO • JUNGO • PALITOS CHINOS</span></div>
+            <div class="marquee-row"><span>UNO • LIARS UNO • UNO FLIP • UNO FLEX • UNO SHOW EM NO MERCY • UNO TEAMS • UNO EXPRESS • UNO HARRY POTTER • UNO ELITE F1 • UNO PACK DE REVERSA • UNO • LIARS UNO • UNO FLIP</span></div>
+        </div>
+        <div class="welcome-content">
+            <h1>🎲 Mi Rincón Lúdico</h1>
+            <p>¿No sabes a qué jugar hoy? ¡Revisa tu colección!</p>
+            <button id="btn-comenzar" class="btn-principal">Empezar a buscar juegos</button>
+        </div>
+    </div>
+
+    <h1> ✮⋆˙ ¿Quién Juega? ˙⋆✮</h1>
+
+    <!-- SECCIÓN DE LA RULETA INTERACTIVA -->
+    <div class="contenedor-ruleta">
+        <h3>🎯 Ruleta del Destino</h3>
+        <div class="controles-ruleta">
+            <select id="select-categoria-ruleta">
+                <option value="todos">Cualquier Categoría</option>
+                <option value="agilidad">🏃‍♂️ Agilidad</option>
+                <option value="familia">🍰 Familia</option>
+                <option value="party games">💥 Party Games</option>
+                <option value="saga uno">🃏 Saga UNO</option>
+                <option value="tablero">♟️ Tablero</option>
+                <option value="custom">🛠️ Selección Personalizada</option>
+            </select>
+            <button id="btn-girar" class="btn-ruleta">¡Girar Ruleta!</button>
+        </div>
+        <div class="pantalla-ruleta">
+            <div id="resultado-ruleta">Elige una categoría y gira el destino</div>
+        </div>
+        <div class="seccion-jugadores">
+    <h3>👥 ¿Quién empieza?</h3>
+    
+    <div class="input-jugador-grupo">
+        <input type="text" id="input-nombre-jugador" placeholder="Nombre del jugador...">
+        <button id="btn-agregar-jugador" type="button"> Añadir</button>
+    </div>
+
+    <ul id="lista-jugadores-visual">
+        </ul>
+    </ul>
+<p style="text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: -5px;">
+    👥 Jugadores activos: <strong id="contador-numero" style="color: #ffffff;">0</strong>
+</p>
+    <button id="btn-sortear-jugador" type="button" class="btn-girar">🎲 Sortear Jugador</button>
+    <div id="resultado-jugador">Esperando jugadores...</div>
+</div>
+    </div>
+
+    <!-- SECCIÓN FILTROS Y CONTADOR -->
+    <div class="seccion-filtros">
+        <div class="grupo-filtro">
+            <label>Categoría:</label>
+            <button id="btn-cat-todos" class="btn-filtro activo" onclick="filtrar('todos', this)">Todos</button>
+            <button id="btn-cat-agilidad" class="btn-filtro" onclick="filtrar('agilidad', this)">Agilidad</button>
+            <button id="btn-cat-familia" class="btn-filtro" onclick="filtrar('familia', this)">Familia</button>
+            <button id="btn-cat-party" class="btn-filtro" onclick="filtrar('party games', this)">Party Games</button>
+            <button id="btn-cat-uno" class="btn-filtro" onclick="filtrar('saga uno', this)">Saga UNO</button>
+            <button id="btn-cat-tablero" class="btn-filtro" onclick="filtrar('tablero', this)">Tablero</button>
+            <button id="btn-cat-custom" class="btn-filtro" onclick="filtrar('custom', this)">Custom</button>
+        </div>
+        
+        <div class="contador-juegos">
+            <span>Mostrando:</span>
+            <span id="badge-contador" class="contador-badge">0</span>
+            <span>juegos de mesa</span>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DE TARJETAS DE JUEGOS (Casillas desmarcadas por defecto) -->
+    <div id="contenedor-juegos" class="contenedor-juegos">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
